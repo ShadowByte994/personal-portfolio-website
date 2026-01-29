@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Karan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+            <span>Karan</span>
+        </div>
+
+        <div class="links">
+            <div class="link"><a href="#">Home</a></div>
+            <div class="link"><a href="#">About</a></div>
+            <div class="link"><a href="#">Skills</a></div>
+            <div class="link contact-btn"><a href="#">Contact</a></div>
+        </div>
+
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+
+    <div class="dropdown">
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <div class="main-container">
+        <div class="image" data-aos="zoom-in-right" data-aos-duration="2000">
+            <img src="main.jpeg" alt="Profile Image">
+        </div>
+
+        <div class="content">
+            <h1 data-aos="fade-left">Hey I'm <span>Karan</span></h1>
+
+            <div class="typewriter">
+                I'm a <span></span>
+            </div>
+
+            <p data-aos="fade-up">
+                I am a Computer Science student currently learning Java and basic web development.
+                This portfolio is a beginner-level project created to practice HTML, CSS,
+                responsiveness, and simple JavaScript interactions.
+            </p>
+
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <div class="btn">
+                <button>Learning Portfolio</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({offset:0});
+
+    function hamburg(){
+        document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel(){
+        document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+</script>
+
+</body>
+</html>
